@@ -134,6 +134,7 @@ body{
     padding: 1rem;
     padding-left: 2rem;
     color: aliceblue;
+    z-index: 20;
 }
 .Rules .rulesContainer h1{
     text-align: center;
