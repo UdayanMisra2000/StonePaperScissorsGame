@@ -14,7 +14,12 @@ A fun, browser-based implementation of the classic "Stone, Paper, Scissors" game
 - **JavaScript**: Logic for gameplay, animations, and score management.
 
 ## 🎲 How to Play
-1. Clone the repository or download the files:
+1. Play here👇:
    ```bash
-   git clone https://github.com/your-username/stone-paper-scissors.git
+   https://udayanmisra2000.github.io/StonePaperScissorsGame/
+2. Clone the repository or download the files:
+   ```bash
+   https://github.com/your-username/stone-paper-scissors.git
+   ```bash
+   https://github.com/UdayanMisra2000/StonePaperScissorsGame
 
