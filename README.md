@@ -20,6 +20,5 @@ A fun, browser-based implementation of the classic "Stone, Paper, Scissors" game
 2. Clone the repository or download the files:
    ```bash
    https://github.com/your-username/stone-paper-scissors.git
-   ```bash
    https://github.com/UdayanMisra2000/StonePaperScissorsGame
 
