@@ -1,0 +1,310 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(140, 196, 97, 1);
+}
+#Container{
+    border: solid 2px white;
+    border-radius: 13px;
+    position: absolute;
+    height: 10rem;
+    width: 60vw;
+    left: 20vw;
+    top: 6vh;
+    padding: 0.5rem;
+}
+.header{
+    display: inline-block;
+    width: fit-content;
+}
+.header > h1{
+    color: rgba(255, 255, 255, 1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+.ScoreCard{
+    position: absolute;
+    left: 35vw;
+    height: 8rem;
+    width: 24vw;
+    top: 0.9rem;
+    display: flex;
+    /* gap: 1rem; */
+    justify-content: space-around;
+}
+.ScoreCard .score{
+    background-color: aliceblue;
+    width: 10vw;
+    padding: 0.5rem;
+    border-radius: 9px;
+    text-align: center;
+    font-size: large;
+}
+.ScoreCard .score #scoreComp , #scoreUser{
+    padding: 0.7rem;
+    font-weight: 600;
+    font-size: xxx-large;
+}
+#Hands{
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    align-items: center;
+    height: 50vh;
+    width: 30vw;
+}
+#Hands .hand{
+    background-color: white;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 0.8rem;
+    z-index: 20;
+}
+#Hands .hand img{
+    height:4rem;
+}
+#Hands #stone{
+    border: solid 18px rgba(0, 116, 182, 1);
+}
+#Hands #scissors{
+    border: solid 18px rgba(189, 0, 255, 1);
+    rotate: 25deg;
+    position: absolute;
+    right: 0;
+}
+#Hands #paper{
+    border: solid 18px rgba(255, 169, 67, 1);
+    position: absolute;
+    bottom: 0;
+    left: 10.5vw;
+}
+#Hands .line{
+    background-color: rgba(0, 0, 0, 0.64);
+    width: 10rem;
+    height: 1rem;
+    z-index: -2;
+}
+#Hands #l1{
+    position: absolute;
+    left: 7.9rem;
+    top: 4rem;
+}
+#Hands #l2{
+    rotate: 135deg;
+    position: absolute;
+    top: 10rem;
+    right:2.2rem
+}
+#Hands #l3{
+    rotate: 45deg;
+    position: absolute;
+    top: 10rem;
+    left:2rem
+}
+#rules{
+    background-color: transparent;
+    color: aliceblue;
+    position: absolute;
+    bottom: 5vh;
+    right: 5vw;
+    border: white 2px solid;
+    border-radius: 10px;
+    font-size:xx-large;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+#rules:hover{
+    background-color: rgba(0, 68, 41, 1); /* Slightly darker */
+}
+.Rules .rulesContainer{
+    position: absolute;
+    top: 35vh;
+    right: 5vw;
+    border: solid 5px whitesmoke;
+    background-color:rgba(0, 68, 41, 1);
+    border-radius: 10px;
+    height: 50vh;
+    width: 25vw;
+    padding: 1rem;
+    padding-left: 2rem;
+    color: aliceblue;
+}
+.Rules .rulesContainer h1{
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+.Rules .rulesContainer #ruleList{
+    list-style-type: square;
+    font-size: large;
+}
+.Rules .rulesContainer #ruleList li::marker{
+    color: yellow;
+    font-size: large;
+}
+.Rules .rulesContainer #cross{
+    position:absolute;
+    left: 23vw;
+    bottom: 45vh;
+    border: solid white 5px;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+}
+.Rules .rulesContainer{
+    display: none;
+}
+.animation{
+    height: 16rem;
+    width: 16rem;
+    position: absolute;
+    top: 0;
+}
+.animation #c1{
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    background-color: rgba(2, 122, 2, 0.737);
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+    z-index: -5;
+    animation: customAni 2s ease 0s infinite normal none;
+}
+.animation #c2{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    background-color: greenyellow;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: -10;
+    animation: customAni 2s ease 0s infinite normal none;
+}
+.animation #c3{
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    background-color: rgb(114, 182, 62);
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: -20;
+    animation: customAni 2s ease 0s infinite normal none;
+}
+@keyframes customAni {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.animation{
+    display: none;
+}
+.gameResult{
+    height: 41vh;
+    width: 60vw;
+    position: absolute;
+    top: 45vh;
+    left: 15vw;
+    display: flex;
+    padding: 1rem;
+}
+.gameResult #playerChoice{
+    width: 20vw;
+    text-align: center;
+    z-index: 20;
+    color: whitesmoke;
+}
+.gameResult #result{
+    width: 20vw;
+    align-content:end;
+    text-align: center;
+}
+.gameResult #result button{
+    font-size: large;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: none;
+}
+.gameResult #compChoice{
+    width: 20vw;
+    text-align: center;
+    z-index: 20;
+    color: whitesmoke;
+}
+.gameResult{
+    display: none;
+}
+#next{
+    background-color: transparent;
+    color: aliceblue;
+    position: absolute;
+    bottom: 5vh;
+    right: 15vw;
+    border: white 2px solid;
+    border-radius: 10px;
+    font-size:xx-large;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+#next:hover{
+    background-color: rgba(0, 68, 41, 1); /* Slightly darker */
+}
+#next{
+    display: none;
+}
+#trophyDisplay{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#trophyDisplay button{
+    font-size: large;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    border: none;
+    margin-top:2rem;
+    position: absolute;
+    top: 85vh;
+}
+#trophyDisplay #trophyImg{
+    position: absolute;
+    z-index: -1;
+    top: 25vh;
+}
+#trophyDisplay #star{
+    position: absolute;
+    z-index: 1;
+    top: 5vh;
+}
+#trophyDisplay h1{
+    position: absolute;
+    top: 65vh;
+    font-size: xxx-large;
+    color: white;
+}
+#trophyDisplay h2{
+    position: absolute;
+    top: 75vh;
+    font-size: xx-large;
+    color: white;
+}
+#trophyDisplay{
+    display: none;
+}

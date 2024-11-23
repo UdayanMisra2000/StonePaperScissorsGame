@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="./Project 1.css">
+</head>
+<body>
+    <div id="trophy">
+        <div id="Container" class="trophy">
+            <div class="header">
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSOR</h1>
+            </div>
+            <div class="ScoreCard">
+                <div class="score">
+                    Computer <br> Score
+                    <div id="scoreComp">
+                        0
+                    </div>
+                </div>
+                <div class="score">
+                    Your <br> Score
+                    <div id="scoreUser">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Hands">
+            <div class="hand" id="stone" onclick="game('stone')"><img src="./Images/stone.png" alt="stone"></div>
+            <div class="hand" id="scissors" onclick="game('scissors')"><img src="./Images/scissors.png" alt="Scissors"></div><br>
+            <div class="hand" id="paper" onclick="game('paper')"><img src="./Images/paper.png" alt="Paper"></div>
+            <div class="line" id="l1"></div>
+            <div class="line" id="l2"></div>
+            <div class="line" id="l3"></div>
+        </div>
+        <div class="gameResult trophy" id="gameResult">
+            <div id="playerChoice">YOU PICKED</div>
+            <div id="result">
+                <button id="playAgain" onclick="playAgain()">Play again</button>
+            </div>
+            <div id="compChoice">PC PICKED</div>
+        </div>
+        <div class="animation trophy" id="animation">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>   
+        </div>
+    </div>
+    <div class="Rules">
+        <button id="rules" onclick="rulesOnfun()">Rules</button>
+        <div class="rulesContainer" id="rulesContainer">
+            <h1 id="cross" onclick="rulesOfffun()"><strong>X</strong></h1>
+            <h1>Game Rules</h1>
+            <ul id="ruleList">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+    <button id="next" class="trophy" onclick="nextfun()">NEXT</button>
+    <div class="trophyDisplay" id="trophyDisplay">
+        <img id="star" src="./Images/Group 5.png" alt="star">
+        <img id="trophyImg" src="./Images/Vector.png" alt="trophy">
+        <h1>HURRAY!!</h1> <H2>YOU WON THE GAME</H2>
+        <button id="playAgain" onclick="playAgain()">Play again</button>
+    </div>
+    <script src="./Project 1.js"></script>
+</body>
+</html>
